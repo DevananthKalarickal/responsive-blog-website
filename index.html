@@ -1,0 +1,914 @@
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BucketListly Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="flag.png">
+   
+</head>
+<body>
+    <section>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-flag fa-lg mr-2 "></i>
+
+                <h1 class="transparent-heading">BucketListly Blog</h1>
+            </div>
+            <div class="wrapper">
+               
+                <div class="searchBar">
+                  <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
+                  <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+              
+            
+            <div class="social-icons">
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-pinterest"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+       
+        
+   
+            <style>
+               
+              /* styles.css */
+.plan-trip {
+    background-color: #1c1e21;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    filter: invert(1);
+}
+
+.item p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.item span {
+    color: #888;
+    font-size: 12px;
+}
+
+.disclaimer {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+            </style>
+       
+            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="planning" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planning</a>
+                                <div class="dropdown-menu dropdown-content " aria-labelledby="planningDropdown">
+                                   
+                                    
+                                        <h2>PLAN A TRIP</h2>
+                                        <div class="grid">
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-airplane.svg" alt="Find Cheap Flights">
+                                                <p>Find Cheap Flights<br><span>via Skyscanner</span></p>
+                                            </div>
+                                            <div class="item"> <img src="assets.bucketlistly.blog/icon-bed.svg" alt="Find Hotels">
+                                                <p>Find Hotels<br><span>via Booking.com</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-single-bed.svg" alt="Find Hostels">
+                                                <p>Find Hostels<br><span>via Hostelworld</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-bus.svg" alt="Find Buses">
+                                                <p>Find Buses<br><span>via Busbud</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-train.svg" alt="Find Trains">
+                                                <p>Find Trains<br><span>via Omio</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-car.svg" alt="Rent a Car">
+                                                <p>Rent a Car<br><span>via DiscoverCars</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-activity.svg" alt="Find Things to Do">
+                                                <p>Find Things to Do<br><span>via Viator</span></p>
+                                            </div>
+                                            <div class="item">  <img src="assets.bucketlistly.blog/icon-tickets.svg" alt="Find Ticket Deals">
+                                                <p>Find Ticket Deals<br><span>via GetYourGuide</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-insurance.svg" alt="Find Travel Insurance">
+                                                <p>Find Travel Insurance<br><span>via Heymondo</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-internet.svg" alt="Find Sim Cards">
+                                                <p>Find Sim Cards<br><span>via Airalo</span></p>
+                                            </div>
+                                            <div class="item">
+                                                <img src="assets.bucketlistly.blog/icon-vpn.svg" alt="Download VPN">
+                                                <p>Download VPN<br><span>via ProtonVPN</span></p>
+                                            </div>
+                                        </div>
+                                        <p class="disclaimer">Disclosure: Links here may be affiliate links and may take you to another page.</p>
+                                    </div>
+                              
+
+
+
+
+
+
+
+
+                      
+        <style>
+          /* Base styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.top-destinations {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.top-destinations h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.top-destinations .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.top-destinations button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.top-destinations button:hover {
+    background-color: #444;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.regions {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.region {
+    width: calc(33.333% - 20px);
+    min-width: 150px;
+}
+
+.region h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.region ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.region ul li {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.region ul li:hover {
+    color: #ffffff;
+}
+
+.region ul li .dot {
+    color: #ff4500;
+}
+
+.map {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map img {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.map img:hover {
+    transform: scale(1.05);
+}
+
+.map p {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.map span {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 720px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .region {
+        width: 100%;
+    }
+
+    .map img {
+        max-width: 100%;
+    }
+
+    .top-destinations h2 {
+        font-size: 20px;
+    }
+
+    .top-destinations button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-destinations h2 {
+        font-size: 18px;
+    }
+
+    .top-destinations button {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    .region ul {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column */
+        gap: 4px; /* Space between items */
+        padding: 3px;
+        margin: 3px;
+        list-style-type: none; /* Removes default list bullets */
+    }
+
+    .region ul li {
+        padding: 5px 0;
+        color: #dcdcdc;
+        cursor: pointer;
+        background: linear-gradient(to right, #444, #222); /* Gradient background */
+        border-radius: 5px; /* Rounds the corners */
+        margin: 5px 0; /* Space between list items */
+        text-align: left; /* Align text to the left */
+    }
+    .container {
+    width: 100%;
+    /* Adjusted max-width to decrease the size of the container */
+    margin: 0 auto;
+    padding: 20px; /* Consider reducing padding if space is tight */
+    overflow: auto; /* Ensures no overflow of contents */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+/* Allow items to wrap */
+}
+
+
+/* Example of reducing padding and font sizes if necessary */
+.top-destinations {
+    text-align: center;
+    margin-bottom: 15px; /* Adjusted margin for less space */
+}
+
+.top-destinations h2 {
+    font-size: 20px; /* Reduced font size */
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1.5px; /* Slightly reduced letter spacing */
+    color: #ffffff;
+}
+
+.top-destinations button {
+    padding: 8px 16px; /* Reduced padding */
+    margin: 5px;
+    font-size: 12px; /* Reduced font size */
+    border-radius: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Reduced gap */
+}
+  /* Reduced padding for small screens */
+    .map img {
+        max-width: 100%;
+    }
+}
+
+
+      </style>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="destination"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
+                        <div class="dropdown-menu mega-menu" aria-labelledby="destinationsDropdown" style="width: 1000px;">
+                            <div class="container">
+                             
+                                        <div class="top-destinations">
+                                            <h2>TOP DESTINATIONS</h2>
+                                            <div class="buttons">
+                                                <button>Thailand</button>
+                                                <button>Indonesia</button>
+                                                <button>Italy</button>
+                                                <button>Albania</button>
+                                                <button>POPULAR REGIONS</button>
+                                                <button>Balkans</button>
+                                                <button>South America</button>
+                                                <button>Southeast Asia</button>
+                                                <button>Central Asia</button>
+                                            </div>
+                                        </div>
+                                        <div class="main-content">
+                                            <div class="regions">
+                                                <div class="region">
+                                                    <h3>ANTARCTICA</h3>
+                                                    <p>coming soon</p>
+                                                </div>
+                                                <div class="region">
+                                                    <h3>AFRICA</h3>
+                                                    <ul>
+                                                        <li>Egypt</li>
+                                                        <li>Kenya</li>
+                                                        <li>South Africa</li>
+                                                        <li>Tanzania</li>
+                                                        <li>Uganda</li>
+                                                        <li>Zambia</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="region">
+                                                    <h3>ASIA</h3>
+                                                    <ul>
+                                                        <li>Armenia</li>
+                                                        <li>Artsakh</li>
+                                                        <li>Azerbaijan</li>
+                                                        <li>Bahrain</li>
+                                                        <li>Bhutan</li>
+                                                        <li>Brunei</li>
+                                                        <li>Cambodia</li>
+                                                        <li>China</li>
+                                                        <li>Georgia</li>
+                                                        <li>Hong Kong</li>
+                                                        <li>India</li>
+                                                        <li>Indonesia <span class="dot">•</span></li>
+                                                        <li>Iran</li>
+                                                        <li>Japan</li>
+                                                        <li>Jordan</li>
+                                                        <li>Kazakhstan</li>
+                                                        <li>Kyrgyzstan</li>
+                                                        <li>Laos</li>
+                                                        <li>Malaysia</li>
+                                                        <li>Mongolia</li>
+                                                        <li>Myanmar</li>
+                                                        <li>Nepal</li>
+                                                        <li>Oman</li>
+                                                        <li>Pakistan</li>
+                                                        <li>Philippines</li>
+                                                        <li>Qatar <span class="dot">•</span></li>
+                                                        <li>Saudi Arabia</li>
+                                                        <li>Singapore <span class="dot">•</span></li>
+                                                        <li>South Korea</li>
+                                                        <li>Sri Lanka</li>
+                                                        <li>Taiwan</li>
+                                                        <li>Tajikistan</li>
+                                                        <li>Thailand <span class="dot">•</span></li>
+                                                        <li>Timor Leste</li>
+                                                        <li>Turkey</li>
+                                                        <li>Turkmenistan</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="region">
+                                                    <h3>EUROPE</h3>
+                                                    <ul>
+                                                        <li>Albania</li>
+                                                        <li>Austria</li>
+                                                        <li>Bosnia</li>
+                                                        <li>Bulgaria</li>
+                                                        <li>Croatia</li>
+                                                        <li>Denmark</li>
+                                                        <li>Estonia</li>
+                                                        <li>Finland</li>
+                                                        <li>France</li>
+                                                        <li>Germany</li>
+                                                        <li>Greece</li>
+                                                        <li>Hungary</li>
+                                                        <li>Iceland</li>
+                                                        <li>Italy</li>
+                                                        <li>Kosovo</li>
+                                                        <li>Latvia</li>
+                                                        <li>Lithuania</li>
+                                                        <li>Malta</li>
+                                                        <li>Montenegro</li>
+                                                        <li>N. Macedonia</li>
+                                                        <li>Poland</li>
+                                                        <li>Portugal</li>
+                                                        <li>Romania</li>
+                                                        <li>Russia</li>
+                                                        <li>Serbia</li>
+                                                        <li>Slovakia</li>
+                                                        <li>Slovenia</li>
+                                                        <li>Spain</li>
+                                                        <li>Sweden</li>
+                                                        <li>Switzerland</li>
+                                                        <li>Ukraine</li>
+                                                        <li>Vatican City</li>
+                                                        <li>UK</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="region">
+                                                    <h3>NORTH AMERICA</h3>
+                                                    <p>coming soon</p>
+                                                </div>
+                                                <div class="region">
+                                                    <h3>OCEANIA</h3>
+                                                    <ul>
+                                                        <li>Australia</li>
+                                                        <li>New Zealand</li>
+                                                    </ul>
+                                                </div>
+                                             
+                                            </div>
+                                            <div class="map">
+                                                <img src="assets.bucketlistly.blog\world-map.svg" alt="World Map" class="img-fluid">
+                                                <p>I am currently in <span>Thailand</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white " href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                                <div class="dropdown-menu " aria-labelledby="aboutDropdown">
+                                    <a class="dropdown-item text-white" href="#">About Me</a>
+                                    <a class="dropdown-item text-white" href="#">work with me</a>
+                                    <a class="dropdown-item text-white" href="#">Sign Up For My Newsletter</a>
+                                    <a class="dropdown-item text-white" href="#">Contact</a>
+
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="#video">Video</a></li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="#inspiration">Inspiration</a></li>
+                               
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#resources">Resources</a></li>
+                              
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                                <div class="dropdown-menu " aria-labelledby="shopDropdown">
+                                  <a class="dropdown-item text-white" href="#">Travel Itineraries</a>
+                                  <a class="dropdown-item text-white" href="#">What I Pack</a>
+                                  <a class="dropdown-item text-white" href="#">Photo Presets</a>
+                                  <a class="dropdown-item text-white" href="#">Holiday Gift Guide</a>
+                                </div>
+                              </li>
+                     <!-- Add navbar items here -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero-section position-relative text-center " style="height: auto;">
+            <div class="hero-content">
+                <h1 class="text-white display-1 mt-n7"><strong>WELCOME</strong></h1>
+            </div>
+            <div class="position-relative d-inline-block">
+                <img src="img.png" alt="Pete R." class="img-fluid img-small" style="z-index: 1;">
+            </div>
+            <div class="text-overlay">
+                <h2  style="  font-size: 50px; "><bold>I'M PETER.K</bold></h2>
+                <p>I create travel guides and backpacking itineraries from around the world,<br> as well as sharing photography resources and more.</p>
+            </div>
+            <div class="hero-text">
+                <a href="#" class="btn btn-warning btn-lg mr-2">READ MY BLOG</a>
+                <a href="#" class="btn btn-dark btn-lg">WATCH MY VIDEOS</a>
+            </div>
+            <div class="position-absolute">
+                <h5 style=" font-size: 1rem;">
+                    I'm a travel blogger based in Thailand,<br>
+                    specializing in backpacking,hiking,and<br>
+                    photography. <a href="#"><b class="text-white">Learn more here.</b></a>
+                </h5>
+            </div>
+            <div class="iframe-container">
+                <iframe width="300" height="150" src="https://www.youtube.com/embed/domgua2BY8k?si=3bPlzwAQ1ZCyz52L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+               <div> <h6 class="rotated-text text-white">Latest Video</h6></div>
+                <div class="d-flex dev-i align-items-center text-white">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>Based in Thailand</span>
+                </div>
+            </div>
+            <div class="sticky-buttons position-fixed" style="bottom: 20px; right: 20px;">
+                <a href="#" class="btn btn-warning"><i class="fas fa-heart"></i></a>
+                <a href="#" class="btn btn-secondary"><i class="fas fa-share"></i></a>
+            </div>
+            <div class="position-fixed" style="bottom: 20px; left: 20px;">
+                <a href="#" class="btn btn-secondary"><i class="bi bi-arrow-up-square"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="bbody">
+        <div class="container">
+          <h2 class="destination-heading">WHERE DO YOU WANT TO GO?</h2>
+          <div class="row destination-icons">
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-thailand.svg" alt="Thailand">
+                    <p>Thailand</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-italy.svg" alt="Italy">
+                    <p>Italy</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-iceland.svg" alt="Iceland">
+                    <p>Iceland</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-albania.svg" alt="Albania">
+                    <p>Albania</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-southeast-asia.svg" alt="Southeast Asia">
+                    <p>Southeast Asia</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-europe.svg" alt="Europe">
+                    <p>Europe</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-south-america.svg" alt="South America">
+                    <p>South America</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <img src="assets.bucketlistly.blog/icon-countries/icon-central-asia.svg" alt="Central Asia">
+                    <p>Central Asia</p>
+                </div>
+                <div class="col-3 col-md-1 destination-item">
+                    <i class="bi bi-arrow-right"></i>
+                    <p>Explore More</p>
+                </div>
+            </div>
+            
+    
+            <div class="row discover-section">
+                <div class="col-12">
+                    <h1 class="text-warning" style="  font-size: 60px; ">DISCOVER THE WORLD</h1>
+                    <p>We have written over 600+ travel guides and backpacking itineraries to provide all the information you need to help plan your dream trip around the world.</p>
+                    <button class="btn btn-outline-light btn-explore">Explore Destinations&nbsp;<i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+    
+            <div class="row world-map justify-content-center">
+                <div class="col-12 text-center">
+                    <img src="assets.bucketlistly.blog\world-map.svg" alt="World Map">
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    <SECTION CLASS="rbody"  id="video">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #1a1a1a, #333333);">
+            <a class="navbar-brand" href="#">BucketListly Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#planning">Planning</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destination">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#inspiration">Inspiration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+    
+        <div  id="video" class="header">
+            <h1  style="  font-size: 60px">MY STORY</h1>
+        </div>
+    
+        <div class="container">
+            <div class="row video-section">
+                <div class="col-12">
+                 
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/domgua2BY8k?si=3bPlzwAQ1ZCyz52L" allowfullscreen></iframe>
+                    </div>
+                </div>
+            
+        
+    
+    
+                <!-- Video Thumbnails Section -->
+                <div class="row video-thumbnails">
+                    <div class="col-6 col-md-3">
+                        <img src="japan-day-and-night-travel-video-cover-image.webp" alt="Japan">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="bhutan-the-land-of-myth-and-magic-cover-image.webp" alt="Bhutan">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="kazakhstan-tapestry-of-contrasts-travel-video-cover-image.webp" alt="Kazakhstan">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="imagine-iceland-cover-image.webp" alt="Iceland">
+                    </div>
+                    <div class="col-12">
+                        <button class="watch-more-btn">Watch More</button>
+                    </div>
+                </div>
+        
+                <!-- Featured On Section -->
+                <div class="row featured-on">
+                    <div class="col-12">
+                        <p>AS FEATURED ON</p>
+                        <img src="pngegg (3).png" alt="Vimeo">
+                        <img src="outside-interactive-inc-logo-vector.svg"  alt="Outside">
+                        <img src="pngegg (2).png" alt="BBC">
+                        <img src="kisspng-national-geographic-mass-media-fox-international-c-national-geographic-5b2500db130045.8768202615291517070778.png"  alt="National Geographic">
+                        <img  src="pngegg (1).png" alt="CNN">
+                    </div>
+                </div>
+            </div></div></div></div></div>
+            <div id="inspiration" class="deva">
+                <div class="container">
+                    <div class="header">
+                        <h1>Most Popular</h1>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <img src="https://images.pexels.com/photos/47229/pexels-photo-47229.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Image 1">
+                            <div class="card-content">
+                                <h3>24 Most Beautiful Travel Blogs to Follow in 2024</h3>
+                                <p class="author">By Pete R. on January 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.pexels.com/photos/1074442/pexels-photo-1074442.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Image 2">
+                            <div class="card-content">
+                                <h3>10 BEST Places to Visit in Southern Thailand</h3>
+                                <p class="author">By Pete R. on January 2, 2024</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Image 3">
+                            <div class="card-content">
+                                <h3>12 Impressive Things to Do in Sofia for Solo Travelers</h3>
+                                <p class="author">By Pete R. on October 26, 2023</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://images.pexels.com/photos/2659475/pexels-photo-2659475.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Image 4">
+                            <div class="card-content">
+                                <h3>One Month Backpacking Indonesia Itinerary for Solo Travelers</h3>
+                                <p class="author">By Pete R. on October 23, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="devan">
+                <div class="container">
+                    <div class="header">
+                        <h1>Recent Posts</h1>
+                    </div>
+                    <div class="post">
+                        <img src="assets.bucketlistly.blog/brunei-bg-image-op.jpg" alt="Saudi Arabia">
+                        <div class="post-content">
+                            <p class="category">Saudi Arabia</p>
+                            <h2>2 Weeks In Saudi Arabia Itinerary</h2>
+                            <p>A Road Trip Travel Guide</p>
+                        </div>
+                    </div>
+                </div></div>
+            
+                <div id ="about" class="devann">
+                    <div class="container">
+                        <div class="header">
+                            <h1>Recent Posts</h1>
+                        </div>
+                        <div class="cards">
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/24284819/pexels-photo-24284819/free-photo-of-view-of-quba-mosque-in-medina-saudi-arabia.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Saudi Arabia">
+                                <div class="card-content">
+                                    <p class="category">Saudi Arabia</p>
+                                    <h3>9 Impressive Things to Do in Jeddah, Saudi Arabia for First-Timers</h3>
+                                    <p>By Pete R. on July 11, 2024</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/6187368/pexels-photo-6187368.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Saudi Arabia">
+                                <div class="card-content">
+                                    <p class="category">Saudi Arabia</p>
+                                    <h3>10 Incredible Things to Do in AlUla, Saudi Arabia for First-Timers</h3>
+                                    <p>By Pete R. on July 9, 2024</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/24403469/pexels-photo-24403469/free-photo-of-part-of-the-tilya-kori-madrasah-at-registan-samarkand-uzbekistan.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Uzbekistan">
+                                <div class="card-content">
+                                    <p class="category">Uzbekistan</p>
+                                    <h3>2 Weeks Backpacking Uzbekistan Itinerary</h3>
+                                    <p>By Pete R. on July 4, 2024</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="https://images.pexels.com/photos/13189976/pexels-photo-13189976.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Kyrgyzstan">
+                                <div class="card-content">
+                                    <p class="category">Kyrgyzstan</p>
+                                    <h3>3 Weeks Backpacking Kyrgyzstan Itinerary</h3>
+                                    <p>By Pete R. on July 4, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                
+                    <div id="resources" class="devannn">
+                      
+                        <div class="container">
+                        
+                            <header>
+                                <h1>Join Bucketlistly Blog Newsletter Today</h1>
+                            </header>
+                            <main>
+                                <h2>Get a <span class="highlight">Free Lightroom Preset</span></h2>
+                                <p>Join our community of over 4,500 readers and receive a free Lightroom preset from us. In addition, you'll get travel news, updates, and captivating travel stories from around the world.</p>
+                                <form>
+                                    <input type="text" placeholder="Name">
+                                    <input type="email" placeholder="Email Address">
+                                    <button type="submit">Subscribe</button>
+                                    <button type="button">Why Subscribe?</button>
+                                </form>
+                            </main>
+                            <footer>
+                                <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
+                            </footer>
+                        </div>
+                    </div>
+                    </div>
+                    <footer>
+                        <div class="footer-content">
+                            <div class="column">
+                                <h3>Popular Itineraries</h3>
+                                <ul>
+                                    <li>3 Months Itinerary in Europe</li>
+                                    <li>2 Weeks Itinerary for Albania</li>
+                                    <li>2 Weeks Greece Itinerary</li>
+                                    <li>One Month in Italy</li>
+                                    <li>7 Days Iceland's Ring Road Itinerary</li>
+                                    <li>6 Months South America Itinerary</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h3>Top Destinations</h3>
+                                <ul>
+                                    <li>Albania Travel Guide</li>
+                                    <li>Italy Travel Guide</li>
+                                    <li>Greece Travel Guide</li>
+                                    <li>Iceland Travel Guide</li>
+                                    <li>Thailand Travel Guide</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h3>About</h3>
+                                <ul>
+                                    <li>About Me</li>
+                                    <li>Privacy Policy</li>
+                                    <li>Terms</li>
+                                    <li>Web Stories</li>
+                                    <li>Best Travel Gear</li>
+                                    <li>Lightroom Presets</li>
+                                    <li>What's in My Camera Backpack?</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h3>Stay Connected</h3>
+                                <ul class="social-links">
+                                    <li><a href="#">Instagram</a></li>
+                                    <li><a href="#">YouTube</a></li>
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="#">Pinterest</a></li>
+                                </ul>
+                                <ul>
+                                    <li>Sign Up For My Newsletter</li>
+                                    <li>Work With Me</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>© 2012–2024 <span class="blog-name">BucketListly Blog</span>. All rights reserved. Made with <span class="heart">❤</span> by <a href="#">The Pete Design</a>.</p>
+                            <button id="mode-toggle">Light Mode</button>
+                        </div>
+                    </footer>
+                
+                    <script> document.getElementById('mode-toggle').addEventListener('click', function() {
+                        document.body.classList.toggle('light-mode');
+                        this.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+                    });</script>
+                </body>
+                
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
